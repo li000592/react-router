@@ -1,0 +1,32 @@
+.UserCard {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    background-color: rgb(230, 225, 225);
+    padding: 1%;
+    border-left: steelblue 10px solid;
+    margin-bottom: 2%;
+}
+.UserList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.buttons {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+.info {
+    width: 60%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* align-self: flex-start */
+}
+.info p {
+
+}
