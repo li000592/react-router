@@ -13,33 +13,7 @@ const demo = [{
 }]
 
 function App() {
-
-  // let page
-  // const useReactPath = () => {
-  //   const [path, setPath] = React.useState(window.location.pathname);
-  //   const listenToPopstate = () => {
-  //     const winPath = window.location.pathname;
-  //     setPath(winPath);
-  //   };
-  //   React.useEffect(() => {
-  //     window.addEventListener("popstate", listenToPopstate);
-  //     return () => {
-  //       window.removeEventListener("popstate", listenToPopstate);
-  //     };
-  //   }, []);
-  //   return path;
-  // };
-  // const [page, setPage] = useState('User')
-
   const [users, setUsers] = useState(demo)
-  // const path = useReactPath();
-
-
-  // useEffect(() => {
-  //   const currentPath = location.pathname;
-  //   const searchParams = new URLSearchParams(location.search);
-  // }, [location]);
-
   useEffect(() => {
     getData('users').then(response => setUsers(response))
   }, [])
@@ -58,7 +32,6 @@ function App() {
         <Header />
         <main>
           <Switch>
-
             {/* <Route /> with no path will always match. Using it as the last 
           item in the <Switch /> block will make it the default fall-back if
           no other <Route /> matches. */}

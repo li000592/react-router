@@ -15,7 +15,6 @@ function UserCard(props) {
                     <p>{props.user.email}</p>
                 </div>
                 <div className="buttons">
-
                     <button>
                         <Link className="NavLink" to='posts'>Load Posts</Link>
                     </button>
