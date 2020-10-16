@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Users.css'
+import './User.css'
 import img from './img/pic-k-100.png'
 
-function UserCard(props) {
+function User(props) {
     return (
         <div className="UserList">
             <div className="UserCard">
@@ -16,10 +16,10 @@ function UserCard(props) {
                 </div>
                 <div className="buttons">
                     <button>
-                        <Link className="NavLink" to='posts'>Load Posts</Link>
+                        <Link className="NavLink" to={'/posts/' + props.user.id}>Load Posts</Link>
                     </button>
                     <button>
-                        <Link className="NavLink" to='todos'>Load todos</Link>
+                        <Link className="NavLink" to={'/todos/' + props.user.id}>Load todos</Link>
                     </button>
                 </div>
             </div>
@@ -27,4 +27,4 @@ function UserCard(props) {
     )
 }
 
-export default UserCard
+export default User

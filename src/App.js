@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
-import UserList from './UserList'
+import { BrowserRouter as Router, Route, Switch, NavLink, useLocation } from 'react-router-dom'
 import Header from './Header'
-import Posts from './Posts'
-import Todos from './Todos'
+import PostsList from './PostsList'
 import './App.css';
+import UserList from './UserList'
+import TodoList from './TodoList'
 
 const demo = [{
   id: 1,
   name: "123",
-  email: "123@123.com"
+  email: "123@123.com",
+  title: '123'
 }]
 
 function App() {
   const [users, setUsers] = useState(demo)
   useEffect(() => {
     getData('users').then(response => setUsers(response))
+  }, [])
+  const [posts, setPosts] = useState(demo)
+  useEffect(() => {
+    getData('posts').then(response => setPosts(response))
+  }, [])
+  const [todos, setTodos] = useState(demo)
+  useEffect(() => {
+    getData('todos').then(response => setTodos(response))
   }, [])
   async function getData(type) {
     try {
@@ -35,14 +44,13 @@ function App() {
             {/* <Route /> with no path will always match. Using it as the last 
           item in the <Switch /> block will make it the default fall-back if
           no other <Route /> matches. */}
-            <Route path='/posts'>
+            <Route path='/posts/:id'>
               <h1>POSTS</h1>
-              <Posts />
-              {/* <FilmDetails posts={posts} /> */}
+              <PostsList posts={posts} />
             </Route>
-            <Route path='/todos'>
+            <Route path='/todos/:id'>
               <h1>TODOS</h1>
-              <Todos />
+              <TodoList todos={todos} />
             </Route>
             <Route path='/'>
               <UserList users={users} />
@@ -50,7 +58,6 @@ function App() {
             <Route>
               <React.Fragment>
                 <h1>Loading Users</h1>
-                <NavLink className="NavLink" to='posts'>BUTTON</NavLink>
               </React.Fragment>
             </Route>
           </Switch>

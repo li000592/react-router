@@ -1,9 +1,9 @@
 import React from 'react'
-import UserCard from './UserCard'
+import User from './User'
 
 function UserList(props) {
     const cards = props.users.map(user => {
-        return <UserCard key={user.id} user={user} />
+        return <User key={user.id} user={user} />
     })
     return (
         <div>

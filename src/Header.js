@@ -7,7 +7,8 @@ function Header(props) {
     let location = useLocation().pathname
     React.useEffect(() => {
         if (location === '/') setPages('USER')
-        else setPages(location.slice(1, location.length).toUpperCase())
+        else if (location.includes('posts')) setPages('POST')
+        else setPages('TODO')
     }, [location])
     return (
         <header>
