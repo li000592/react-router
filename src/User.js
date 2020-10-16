@@ -2,13 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './User.css'
 import img from './img/pic-k-100.png'
+import { getRandomAvatar } from './getData'
+import { AvatarGenerator } from 'random-avatar-generator';
+
+
 
 function User(props) {
+    const generator = new AvatarGenerator()
+    let kk = generator.generateRandomAvatar()
     return (
         <div className="UserList">
             <div className="UserCard">
-                <div className="avatar">
-                    <img src={img} alt="avatar" />
+                <div >
+                    <img className="avatar" src={kk} alt="avatar" />
                 </div>
                 <div className="info">
                     <p>{props.user.name}</p>
@@ -16,7 +22,7 @@ function User(props) {
                 </div>
                 <div className="buttons">
                     <Link className="NavLink" to={'/posts/' + props.user.id}>Posts</Link>
-                    <Link className="NavLink" to={'/todos/' + props.user.id}>todos</Link>
+                    <Link className="NavLink" to={'/todos/' + props.user.id}>Todos</Link>
                 </div>
             </div>
         </div>

@@ -1,11 +1,11 @@
 h1 {
-    color: rgb(4, 50, 88);
     text-align: center;
     align-items: center;
     font-size: 50px;
 }
 header{
-    background-color: steelblue;
+    color: rgb(4, 50, 88);
+    background-color: steelblue; 
     border-bottom: rgb(4, 50, 88) 10px solid;
     height: 120px;
     display: flex;

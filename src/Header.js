@@ -2,12 +2,14 @@ import React from 'react'
 import './Header.css'
 import { useLocation } from "react-router-dom";
 
-function Header(props) {
+function Header() {
     const [pages, setPages] = React.useState()
     let location = useLocation().pathname
     React.useEffect(() => {
         if (location === '/') setPages('USER')
-        else if (location.includes('posts')) setPages('POST')
+        else if (location.includes('posts')) {
+            setPages('POST')
+        }
         else setPages('TODO')
     }, [location])
     return (
