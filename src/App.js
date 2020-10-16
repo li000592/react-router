@@ -7,15 +7,8 @@ import UserList from './UserList'
 import TodoList from './TodoList'
 import { getData } from './getData'
 
-const demo = [{
-  id: 1,
-  name: "123",
-  email: "123@123.com",
-  title: '123'
-}]
-
 function App() {
-  const [users, setUsers] = useState(demo)
+  const [users, setUsers] = useState()
   useEffect(() => {
     getData('users').then(response => setUsers(response))
   }, [])
@@ -29,13 +22,13 @@ function App() {
             {/* <Route /> with no path will always match. Using it as the last 
           item in the <Switch /> block will make it the default fall-back if
           no other <Route /> matches. */}
-            <Route path='/posts/:id'>
+            <Route exact path='/posts/:id'>
               <PostsList />
             </Route>
-            <Route path='/todos/:id'>
+            <Route exact path='/todos/:id'>
               <TodoList />
             </Route>
-            <Route path='/'>
+            <Route exact path='/'>
               <UserList users={users} />
             </Route>
             <Route>
