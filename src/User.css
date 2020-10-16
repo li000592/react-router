@@ -27,6 +27,8 @@
     align-items: flex-start;
     /* align-self: flex-start */
 }
-.info p {
-
+@media (min-width: 960px) {
+    .UserCard{
+        width: 780px;
+    }
 }

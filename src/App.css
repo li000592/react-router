@@ -16,3 +16,12 @@
   color: white;
 }
 
+.loading {
+  margin-top: 20%;
+  animation: crescendo 1.5s alternate infinite ease-in;
+}
+
+@keyframes crescendo {
+  0%   {transform: scale(.8);}
+  100% {transform: scale(1.5);}
+}

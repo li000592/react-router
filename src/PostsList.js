@@ -12,9 +12,7 @@ function PostsList(props) {
     })
     return (
         <div>
-
             <NavLink className="NavLink" to='/'>Home</NavLink>
-
             <div className='card-container'>{cards}</div>
         </div>
 

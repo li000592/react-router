@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom'
 import './Post.css'
 
 function Post(props) {
-    let { id } = useParams()
-    console.log("ID", id);
-    console.log("123", props);
+
+
     return (
         <div className="PostList">
             <div className="PostCard">
@@ -13,7 +12,7 @@ function Post(props) {
                     {/* <img src={img} alt="avatar" /> */}
                 </div>
                 <div className="info">
-                    <p>{props.post.title}</p>
+                    <h3>{props.post.title}</h3>
                     <p>{props.post.body}</p>
                 </div>
             </div>

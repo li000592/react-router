@@ -15,12 +15,8 @@ function User(props) {
                     <p>{props.user.email}</p>
                 </div>
                 <div className="buttons">
-                    <button>
-                        <Link className="NavLink" to={'/posts/' + props.user.id}>Load Posts</Link>
-                    </button>
-                    <button>
-                        <Link className="NavLink" to={'/todos/' + props.user.id}>Load todos</Link>
-                    </button>
+                    <Link className="NavLink" to={'/posts/' + props.user.id}>Load Posts</Link>
+                    <Link className="NavLink" to={'/todos/' + props.user.id}>Load todos</Link>
                 </div>
             </div>
         </div>

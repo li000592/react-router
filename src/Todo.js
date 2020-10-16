@@ -1,7 +1,8 @@
 import React from 'react'
-
+import './Todo.css'
 
 function Todo(props) {
+    console.log(props);
     return (
         <div className="TodoList">
             <div className="TodoCard">
@@ -9,8 +10,8 @@ function Todo(props) {
                     {/* <img src={img} alt="avatar" /> */}
                 </div>
                 <div className="info">
-                    <p>{props.todo.title}</p>
-                    <p>123</p>
+                    <h3>{props.todo.title}</h3>
+                    <p>pending</p>
                 </div>
             </div>
         </div>
