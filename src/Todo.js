@@ -2,7 +2,6 @@ import React from 'react'
 import './Todo.css'
 
 function Todo(props) {
-    console.log(props);
     return (
         <div className="TodoList">
             <div className="TodoCard">

@@ -1,11 +1,21 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Todo from './Todo'
+import { getData } from './getData'
+const demo = [{
+    id: 1,
+    name: "123",
+    email: "123@123.com",
+    title: '123'
+}]
 
-function TodoList(props) {
+function TodoList() {
+    const [todos, setTodos] = React.useState(demo)
+    React.useEffect(() => {
+        getData('todos').then(response => setTodos(response))
+    }, [])
     let { id } = useParams()
-    console.log("ID:===", id);
-    const cards = props.todos.map(todo => {
+    const cards = todos.map(todo => {
         if (todo.userId == id) return <Todo key={todo.id} todo={todo} />
     })
     return (

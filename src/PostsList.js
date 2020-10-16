@@ -1,13 +1,20 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Post from './Post'
-
-
-function PostsList(props) {
-    console.log(props)
+import { getData } from './getData'
+const demo = [{
+    id: 1,
+    name: "123",
+    email: "123@123.com",
+    title: '123'
+}]
+function PostsList() {
+    const [posts, setPosts] = React.useState(demo)
+    React.useEffect(() => {
+        getData('posts').then(response => setPosts(response))
+    }, [])
     let { id } = useParams()
-    console.log("ID:===", id);
-    const cards = props.posts.map(post => {
+    const cards = posts.map(post => {
         if (post.userId == id.toString()) return <Post key={post.id} post={post} />
     })
     return (

@@ -13,27 +13,11 @@ const demo = [{
   email: "123@123.com",
   title: '123'
 }]
-// async function getData(type) {
-//   try {
-//     const response = await fetch('https://jsonplaceholder.typicode.com/' + type)
-//     if (!response.ok) throw new Error(response.statusText)
-//     return response.json()
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+
 function App() {
   const [users, setUsers] = useState(demo)
   useEffect(() => {
     getData('users').then(response => setUsers(response))
-  }, [])
-  const [posts, setPosts] = useState(demo)
-  useEffect(() => {
-    getData('posts').then(response => setPosts(response))
-  }, [])
-  const [todos, setTodos] = useState(demo)
-  useEffect(() => {
-    getData('todos').then(response => setTodos(response))
   }, [])
 
   return (
@@ -46,10 +30,10 @@ function App() {
           item in the <Switch /> block will make it the default fall-back if
           no other <Route /> matches. */}
             <Route path='/posts/:id'>
-              <PostsList posts={posts} />
+              <PostsList />
             </Route>
             <Route path='/todos/:id'>
-              <TodoList todos={todos} />
+              <TodoList />
             </Route>
             <Route path='/'>
               <UserList users={users} />
