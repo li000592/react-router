@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './User.css'
 import img from './img/pic-k-100.png'
-import { getRandomAvatar } from './getData'
 import { AvatarGenerator } from 'random-avatar-generator';
 
 
@@ -13,7 +12,7 @@ function User(props) {
     return (
         <div className="UserList">
             <div className="UserCard">
-                <div >
+                <div className="avatarDiv" >
                     <img className="avatar" src={kk} alt="avatar" />
                 </div>
                 <div className="info">

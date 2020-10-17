@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import PostsList from './PostsList'
-import './App.css';
 import UserList from './UserList'
 import TodoList from './TodoList'
 import { getData } from './getData'
+import './App.css';
 
 function App() {
   const [users, setUsers] = useState()
@@ -19,9 +19,6 @@ function App() {
         <Header />
         <main>
           <Switch>
-            {/* <Route /> with no path will always match. Using it as the last 
-          item in the <Switch /> block will make it the default fall-back if
-          no other <Route /> matches. */}
             <Route exact path='/posts/:id'>
               <PostsList />
             </Route>

@@ -4,15 +4,15 @@ import Post from './Post'
 import { getData } from './getData'
 
 function PostsList() {
+    let { id } = useParams()
     const [posts, setPosts] = React.useState()
     React.useEffect(() => {
-        getData('posts').then(response => setPosts(response))
-    }, [])
-    let { id } = useParams()
+        getData('posts', id).then(response => setPosts(response))
+    }, [id])
+
     if (!posts) return <h1 className='loading'>Loading Users</h1>
     const cards = posts.map(post => {
-        if (`${post.userId}` === id) return <Post key={post.id} post={post} />
-        return null
+        return <Post key={post.id} post={post} />
     })
     return (
         <div>

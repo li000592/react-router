@@ -1,6 +1,10 @@
-export async function getData(type) {
+export async function getData(type, userId) {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/' + type)
+        let URL
+        if (type === 'users') URL = 'https://jsonplaceholder.typicode.com/users'
+        else URL = `https://jsonplaceholder.typicode.com/users/${userId}/${type}`
+
+        const response = await fetch(URL)
         if (!response.ok) throw new Error(response.statusText)
         return response.json()
     } catch (error) {

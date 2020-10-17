@@ -5,13 +5,13 @@ import { getData } from './getData'
 
 function TodoList() {
     const [todos, setTodos] = React.useState()
-    React.useEffect(() => {
-        getData('todos').then(response => setTodos(response))
-    }, [])
     let { id } = useParams()
+    React.useEffect(() => {
+        getData('todos', id).then(response => setTodos(response))
+    }, [id])
     if (!todos) return <h1 className='loading'>Loading Users</h1>
     const cards = todos.map(todo => {
-        if (`${todo.userId}` === id) return <Todo key={todo.id} todo={todo} />
+        return <Todo key={todo.id} todo={todo} />
         return null
     })
     return (
