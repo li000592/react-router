@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/li000592/mad9135-f20-c2-react-router/static/css/main.ac61207d.chunk.css",
+    "main.js": "/li000592/mad9135-f20-c2-react-router/static/js/main.434a7f09.chunk.js",
+    "main.js.map": "/li000592/mad9135-f20-c2-react-router/static/js/main.434a7f09.chunk.js.map",
+    "runtime-main.js": "/li000592/mad9135-f20-c2-react-router/static/js/runtime-main.26f92359.js",
+    "runtime-main.js.map": "/li000592/mad9135-f20-c2-react-router/static/js/runtime-main.26f92359.js.map",
+    "static/js/2.6c409aa9.chunk.js": "/li000592/mad9135-f20-c2-react-router/static/js/2.6c409aa9.chunk.js",
+    "static/js/2.6c409aa9.chunk.js.map": "/li000592/mad9135-f20-c2-react-router/static/js/2.6c409aa9.chunk.js.map",
+    "index.html": "/li000592/mad9135-f20-c2-react-router/index.html",
+    "precache-manifest.519e934c18c1ae8a97c82cc2e52fade6.js": "/li000592/mad9135-f20-c2-react-router/precache-manifest.519e934c18c1ae8a97c82cc2e52fade6.js",
+    "service-worker.js": "/li000592/mad9135-f20-c2-react-router/service-worker.js",
+    "static/css/main.ac61207d.chunk.css.map": "/li000592/mad9135-f20-c2-react-router/static/css/main.ac61207d.chunk.css.map",
+    "static/js/2.6c409aa9.chunk.js.LICENSE.txt": "/li000592/mad9135-f20-c2-react-router/static/js/2.6c409aa9.chunk.js.LICENSE.txt",
+    "static/media/pic-k-100.png": "/li000592/mad9135-f20-c2-react-router/static/media/pic-k-100.db846acd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26f92359.js",
+    "static/js/2.6c409aa9.chunk.js",
+    "static/css/main.ac61207d.chunk.css",
+    "static/js/main.434a7f09.chunk.js"
+  ]
+}
